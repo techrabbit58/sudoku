@@ -115,6 +115,7 @@ def _reset_field(chances, unresolved_fields, solution, positions, digit):
 
 
 def _choose_next_unsolved(row_chances, column_chances, box_chances, unsolved_fields):
+    best_field = None
     least_candidates_so_far = 9
     for row, column, box in unsolved_fields:
         candidates = row_chances[row] & column_chances[column] & box_chances[box]
